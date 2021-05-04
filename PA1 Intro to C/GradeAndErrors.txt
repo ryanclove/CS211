@@ -1,0 +1,135 @@
+PA1 Auto-grader, Release 2
+
+bst: error running 'make' (return code 2)
+clang -g -std=c99 -Wall -Wvla -Werror -fsanitize=address,undefined ../../src/bst/bst.c -o bst
+../../src/bst/bst.c:108:10: error: incompatible pointer types passing 'char [3]' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Werror,-Wincompatible-pointer-types]
+fscanf("%c", &command);
+^~~~
+/usr/include/stdio.h:443:50: note: passing argument to parameter '__stream' here
+extern int __REDIRECT (fscanf, (FILE *__restrict __stream,
+^
+/usr/include/sys/cdefs.h:186:46: note: expanded from macro '__REDIRECT'
+# define __REDIRECT(name, proto, alias) name proto __asm__ (__ASMNAME (#alias))
+^
+../../src/bst/bst.c:108:16: error: format string is not a string literal (potentially insecure) [-Werror,-Wformat-security]
+fscanf("%c", &command);
+^~~~~~~~
+../../src/bst/bst.c:110:11: error: incompatible pointer types passing 'char [3]' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Werror,-Wincompatible-pointer-types]
+fscanf("%d", &n);
+^~~~
+/usr/include/stdio.h:443:50: note: passing argument to parameter '__stream' here
+extern int __REDIRECT (fscanf, (FILE *__restrict __stream,
+^
+/usr/include/sys/cdefs.h:186:46: note: expanded from macro '__REDIRECT'
+# define __REDIRECT(name, proto, alias) name proto __asm__ (__ASMNAME (#alias))
+^
+../../src/bst/bst.c:110:17: error: incompatible pointer types passing 'int *' to parameter of type 'const char *' [-Werror,-Wincompatible-pointer-types]
+fscanf("%d", &n);
+^~
+/usr/include/stdio.h:444:28: note: passing argument to parameter '__format' here
+const char *__restrict __format, ...),
+^
+/usr/include/sys/cdefs.h:186:46: note: expanded from macro '__REDIRECT'
+# define __REDIRECT(name, proto, alias) name proto __asm__ (__ASMNAME (#alias))
+^
+../../src/bst/bst.c:110:17: error: format string is not a string literal (potentially insecure) [-Werror,-Wformat-security]
+fscanf("%d", &n);
+^~
+../../src/bst/bst.c:113:11: error: incompatible pointer types passing 'char [3]' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Werror,-Wincompatible-pointer-types]
+fscanf("%d", &n);
+^~~~
+/usr/include/stdio.h:443:50: note: passing argument to parameter '__stream' here
+extern int __REDIRECT (fscanf, (FILE *__restrict __stream,
+^
+/usr/include/sys/cdefs.h:186:46: note: expanded from macro '__REDIRECT'
+# define __REDIRECT(name, proto, alias) name proto __asm__ (__ASMNAME (#alias))
+^
+../../src/bst/bst.c:113:17: error: incompatible pointer types passing 'int *' to parameter of type 'const char *' [-Werror,-Wincompatible-pointer-types]
+fscanf("%d", &n);
+^~
+/usr/include/stdio.h:444:28: note: passing argument to parameter '__format' here
+const char *__restrict __format, ...),
+^
+/usr/include/sys/cdefs.h:186:46: note: expanded from macro '__REDIRECT'
+# define __REDIRECT(name, proto, alias) name proto __asm__ (__ASMNAME (#alias))
+^
+../../src/bst/bst.c:113:17: error: format string is not a string literal (potentially insecure) [-Werror,-Wformat-security]
+fscanf("%d", &n);
+^~
+../../src/bst/bst.c:117:11: error: incompatible pointer types passing 'char [3]' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Werror,-Wincompatible-pointer-types]
+fscanf("%d", &n);
+^~~~
+/usr/include/stdio.h:443:50: note: passing argument to parameter '__stream' here
+extern int __REDIRECT (fscanf, (FILE *__restrict __stream,
+^
+/usr/include/sys/cdefs.h:186:46: note: expanded from macro '__REDIRECT'
+# define __REDIRECT(name, proto, alias) name proto __asm__ (__ASMNAME (#alias))
+^
+../../src/bst/bst.c:117:17: error: incompatible pointer types passing 'int *' to parameter of type 'const char *' [-Werror,-Wincompatible-pointer-types]
+fscanf("%d", &n);
+^~
+/usr/include/stdio.h:444:28: note: passing argument to parameter '__format' here
+const char *__restrict __format, ...),
+^
+/usr/include/sys/cdefs.h:186:46: note: expanded from macro '__REDIRECT'
+# define __REDIRECT(name, proto, alias) name proto __asm__ (__ASMNAME (#alias))
+^
+../../src/bst/bst.c:117:17: error: format string is not a string literal (potentially insecure) [-Werror,-Wformat-security]
+fscanf("%d", &n);
+^~
+11 errors generated.
+make: *** [bst] Error 1
+
+
+palindrome: incorrect output
+arguments ['./palindrome', 'Rats live on no evil star.']
+
+expected: yes
+received: no
+
+palindrome: incorrect output
+arguments ['./palindrome', 'a? b? c? C! B! A!']
+
+expected: yes
+received: no
+
+palindrome: incorrect output
+arguments ['./palindrome', 'aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooooppppqqqqppppoooonnnnmmmmllllkkkkjjjjiiiihhhhggggffffeeeeddddccccbbbbaaaa']
+
+expected: yes
+received: no
+
+mexp: incorrect output
+arguments ['./mexp', '/ilab/users/jh1436/cs211/2020spring/grading/pa1/data/mexp/test.07.txt']
+
+reference file: '/ilab/users/jh1436/cs211/2020spring/grading/pa1/data/mexp/ref.07.txt'
+line 1
+expected: '1 0 0 0 0'
+received: '0 0 0 0 0 '
+line 2
+expected: '0 1 0 0 0'
+received: '0 0 0 0 0 '
+line 3
+expected: '0 0 1 0 0'
+received: '0 0 0 0 0 '
+line 4
+expected: '0 0 0 1 0'
+received: '0 0 0 0 0 '
+line 5
+expected: '0 0 0 0 1'
+received: '0 0 0 0 0'
+
+Tests performed: 68 of 88
+Tests failed: 4
+Errors: 1
+
+Regular credit
+-----
+Points     Failed Score
+roman      10.0 10.0
+palindrome 10.0 3 8.1
+rle        10.0 10.0
+list       20.0 20.0
+mexp       20.0 1 18.0
+------     -----
+70.0             66.1
