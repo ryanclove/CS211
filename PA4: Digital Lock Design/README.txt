@@ -6,4 +6,5 @@ truthtable.c in src file is most important
 
 Grade: 100/100 (100%)
 
-Also received 14/16 possible extra credit points
+Also received 14/16 possible extra credit points (in addition to
+the 100 points I received for the main program)
