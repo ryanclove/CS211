@@ -1,0 +1,25 @@
+Additional instructor's comments about your submission
+PA4 Auto-grader, Release 1
+
+truthtable:2: terminated by AddressSanitizer
+arguments ['./truthtable', '/ilab/users/jh1436/cs211/2020spring/pa4grading/pa4/data/test.2.12.txt']
+
+SUMMARY: AddressSanitizer: SEGV /tmp/tmp3zc9xucl/build/../src/truthtable.c:744 solveMuxNode
+
+truthtable:2: terminated by AddressSanitizer
+arguments ['./truthtable', '/ilab/users/jh1436/cs211/2020spring/pa4grading/pa4/data/test.2.16.txt']
+
+SUMMARY: AddressSanitizer: SEGV /tmp/tmp3zc9xucl/build/../src/truthtable.c:744 solveMuxNode
+
+Tests performed: 36 of 36
+Tests failed: 2
+
+Regular credit
+-----
+Points Failed Score
+truthtable:1 100.0 100.0
+
+Extra credit
+-----
+Points Failed Score
+truthtable:2 16.0 2 14.0
